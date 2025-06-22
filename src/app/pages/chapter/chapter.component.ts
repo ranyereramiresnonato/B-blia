@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {velhoTestamento, novoTestamento} from '../../consts/books'
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 
@@ -20,7 +20,9 @@ export class ChapterComponent {
   bookName: string | undefined = "";
   chapters: number[] = []; 
 
-  constructor(private route: ActivatedRoute){
+  constructor(
+    private route: ActivatedRoute,
+    private router:Router){
    this.route.queryParamMap.subscribe(params => {
       this.isNewTestament = params.get('isNewTestament') == "true";
       this.book = params.get('book')
@@ -44,4 +46,14 @@ export class ChapterComponent {
   generateList(quantity:number) {
     return Array.from({ length: quantity }, (_, i) => i + 1);
   }
+
+  gotoDetail(chapter: number) {
+    this.router.navigate(['/chapter-detail'], {
+      queryParams: {
+        chapter: chapter,
+        book: this.book
+      }
+    });
+  }
 }
+

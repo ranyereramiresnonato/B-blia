@@ -1,5 +1,5 @@
 export const velhoTestamento = [
-  { id: 1, nome: "genesis", titulo: "Gênesis", capitulos: 50 },
+  { id: 1, nome: "gn", titulo: "Gênesis", capitulos: 50 },
   { id: 2, nome: "exodo", titulo: "Êxodo", capitulos: 40 },
   { id: 3, nome: "levitico", titulo: "Levítico", capitulos: 27 },
   { id: 4, nome: "numeros", titulo: "Números", capitulos: 36 },
