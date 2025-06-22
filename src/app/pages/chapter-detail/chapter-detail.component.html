@@ -1,11 +1,11 @@
 <div class="flex justify-center px-4 py-6">
-  <div
-    class="surface-card p-6 max-w-3xl w-full bg-white border-round shadow-lg"
-  >
-    <button
-      (click)="goBack()"
-      class="mb-6 p-4 text-xl border-2 border-gray-700 border-round bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-500"
-    >
+  <div class="surface-card p-6 max-w-3xl w-full bg-white border-round shadow-lg">
+
+    <button (click)="goBack()" 
+            class="mb-6 p-4 text-xl border-2 border-gray-700 border-round 
+                   bg-gray-900 text-white hover:bg-gray-800 
+                   transition-colors duration-200 flex items-center
+                   focus:outline-none focus:ring-2 focus:ring-gray-500">
       Voltar
     </button>
 
@@ -13,31 +13,31 @@
       {{ bookName }} - Capítulo {{ chapter }}
     </h2>
 
-    <br />
+    <br>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-      <div
-        *ngFor="let verse of verses; let i = index"
-        class="p-3 border border-gray-300 border-round text-2xl md:text-3xl leading-snug w-full"
-      >
+      <div *ngFor="let verse of verses; let i = index" 
+           class="p-3 border border-gray-300 border-round text-2xl md:text-3xl leading-snug w-full">
         <span class="font-semibold text-primary mr-3">{{ i + 1 }}</span>
         <span>{{ verse }}</span>
       </div>
     </div>
 
-    <div class="flex justify-center mt-8 space-x-8">
-      <button
-        (click)="previousChapter()"
-        class="p-4 text-xl border-2 border-gray-700 border-round bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        ◀ Anterior
-      </button>
+   <div class="flex justify-center mt-8 space-x-8">
+  <button (click)="previousChapter()" 
+          class="p-4 text-xl border-2 border-gray-700 border-round 
+                 bg-gray-900 text-white hover:bg-gray-800 
+                 transition-colors duration-200 flex items-center
+                 focus:outline-none focus:ring-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed">
+    ◀ Anterior
+  </button>
 
-      <button
-        (click)="nextChapter()"
-        class="p-4 text-xl border-2 border-gray-700 border-round bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-200 flex items-center focus:outline-none focus:ring-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        Próximo ▶
-      </button>
-    </div>
+  <button (click)="nextChapter()" 
+          class="p-4 text-xl border-2 border-gray-700 border-round 
+                 bg-gray-900 text-white hover:bg-gray-800 
+                 transition-colors duration-200 flex items-center
+                 focus:outline-none focus:ring-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed">
+    Próximo ▶
+  </button>
+</div>
   </div>
 </div>
