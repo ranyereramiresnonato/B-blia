@@ -1,10 +1,14 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-
   <div class="surface-card p-3 md:p-4 border-round shadow-2">
-    <h2 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Antigo Testamento</h2>
+    <h2 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+      Antigo Testamento
+    </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
-      <div *ngFor="let livro of velhoTestamento" (click)="goToChapter(false, livro.nome)"
-           class="p-2 md:p-3 text-base md:text-lg border-1 border-round cursor-pointer text-center hover:surface-hover transition-colors transition-duration-150">
+      <div
+        *ngFor="let livro of velhoTestamento"
+        (click)="goToChapter(false, livro.nome)"
+        class="p-2 md:p-3 text-base md:text-lg border-1 border-round cursor-pointer text-center hover:surface-hover transition-colors transition-duration-150"
+      >
         {{ livro.titulo }}
       </div>
     </div>
@@ -13,11 +17,13 @@
   <div class="surface-card p-3 md:p-4 border-round shadow-2">
     <h2 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Novo Testamento</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3">
-      <div *ngFor="let livro of novoTestamento" (click)="goToChapter(true, livro.nome)"
-           class="p-2 md:p-3 text-base md:text-lg border-1 border-round cursor-pointer text-center hover:surface-hover transition-colors transition-duration-150">
+      <div
+        *ngFor="let livro of novoTestamento"
+        (click)="goToChapter(true, livro.nome)"
+        class="p-2 md:p-3 text-base md:text-lg border-1 border-round cursor-pointer text-center hover:surface-hover transition-colors transition-duration-150"
+      >
         {{ livro.titulo }}
       </div>
     </div>
   </div>
-
 </div>

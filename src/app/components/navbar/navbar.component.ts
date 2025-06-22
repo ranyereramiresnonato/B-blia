@@ -7,18 +7,16 @@ import { MenubarModule } from 'primeng/menubar';
   standalone: true,
   imports: [MenubarModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-   items = [
-            {
-                label: 'Livros',
-                icon: 'pi pi-book',
-                routerLink: ['/home']
-            },
-        ];
+  items = [
+    {
+      label: 'Livros',
+      icon: 'pi pi-book',
+      routerLink: ['/home'],
+    },
+  ];
 
-        constructor(private router:Router){
-
-        }
+  constructor(private router: Router) {}
 }

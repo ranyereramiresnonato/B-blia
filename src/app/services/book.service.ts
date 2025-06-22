@@ -9,29 +9,32 @@ export interface Book {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BookService {
-
   private jsonUrl = 'books.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(this.jsonUrl);
   }
 
-    getVersesByChapter(abbrev: string, chapterNumber: number): Observable<string[] | null> {
+  getVersesByChapter(
+    abbrev: string,
+    chapterNumber: number,
+  ): Observable<string[] | null> {
     return this.getBooks().pipe(
-      map(books => {
-        const book = books.find(b => b.abbrev === abbrev);
+      map((books) => {
+        const book = books.find((b) => b.abbrev === abbrev);
         if (!book) return null;
 
         const chapterIndex = chapterNumber - 1;
-        if (chapterIndex < 0 || chapterIndex >= book.chapters.length) return null;
+        if (chapterIndex < 0 || chapterIndex >= book.chapters.length)
+          return null;
 
         return book.chapters[chapterIndex];
-      })
+      }),
     );
   }
 }
