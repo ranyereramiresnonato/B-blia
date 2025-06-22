@@ -33,6 +33,7 @@ export class ChapterDetailComponent {
   }
 
   getChapter() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     this.bookService
       .getVersesByChapter(this.book ?? '', this.chapter ?? 0)
       .subscribe({
