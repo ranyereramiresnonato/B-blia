@@ -3,7 +3,7 @@
   <div class="surface-card p-4 border-round shadow-2">
     <h2 class="text-2xl font-bold mb-4">Antigo Testamento</h2>
     <div class="grid grid-cols-2 gap-3">
-      <div *ngFor="let livro of velhoTestamento" 
+      <div *ngFor="let livro of velhoTestamento" (click)="goToChapter(false, livro.nome)"
            class="p-3 text-lg border-1 border-round cursor-pointer text-center hover:surface-hover">
         {{ livro.titulo }}
       </div>
@@ -13,7 +13,7 @@
   <div class="surface-card p-4 border-round shadow-2">
     <h2 class="text-2xl font-bold mb-4">Novo Testamento</h2>
     <div class="grid grid-cols-2 gap-3">
-      <div *ngFor="let livro of novoTestamento" 
+      <div *ngFor="let livro of novoTestamento" (click)="goToChapter(true, livro.nome)"
            class="p-3 text-lg border-1 border-round cursor-pointer text-center hover:surface-hover">
         {{ livro.titulo }}
       </div>
