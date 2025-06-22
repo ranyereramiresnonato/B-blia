@@ -12,40 +12,10 @@ import { MenubarModule } from 'primeng/menubar';
 export class NavbarComponent {
    items = [
             {
-                label: 'Router',
-                icon: 'pi pi-palette',
-                items: [
-                    {
-                        label: 'Installation',
-                        route: '/installation'
-                    },
-                    {
-                        label: 'Configuration',
-                        route: '/configuration'
-                    }
-                ]
-            },
-            {
-                label: 'Programmatic',
-                icon: 'pi pi-link',
-                command: () => {
-                    this.router.navigate(['/installation']);
-                }
-            },
-            {
-                label: 'External',
+                label: 'Home',
                 icon: 'pi pi-home',
-                items: [
-                    {
-                        label: 'Angular',
-                        url: 'https://angular.io/'
-                    },
-                    {
-                        label: 'Vite.js',
-                        url: 'https://vitejs.dev/'
-                    }
-                ]
-            }
+                routerLink: ['/home']
+            },
         ];
 
         constructor(private router:Router){
