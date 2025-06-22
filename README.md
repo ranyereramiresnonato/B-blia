@@ -1,28 +1,35 @@
-# Biblia
+# 📖 B-blia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.19.
+**B-blia** é um projeto frontend desenvolvido em Angular 18, utilizando PrimeNG para a interface visual.  
+Publicação online: [https://b-blia.vercel.app/](https://b-blia.vercel.app/)
 
-## Development server
+A aplicação oferece uma leitura simples e organizada da Bíblia, versão **NVI (Nova Versão Internacional)**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✨ Tecnologias utilizadas
 
-## Code scaffolding
+- [Angular 18](https://angular.io/)
+- [PrimeNG](https://www.primefaces.org/primeng/)
+- Deploy: [Vercel](https://vercel.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 📚 Sobre o projeto
 
-## Build
+- Leitura da Bíblia em uma interface responsiva e amigável
+- Organização por livros e capítulos
+- Conteúdo na versão **NVI** da Bíblia
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Como rodar localmente
 
-## Running unit tests
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/b-blia.git
+cd b-blia
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Instale as dependências
+npm install
 
-## Running end-to-end tests
+# Rode o projeto
+ng serve
+# ou
+npm run start
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# B-blia
+# Acesse: http://localhost:4200
