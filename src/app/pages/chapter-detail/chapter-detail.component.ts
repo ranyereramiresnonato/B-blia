@@ -20,7 +20,9 @@ export class ChapterDetailComponent {
   bookName: string | null | undefined = '';
 
   constructor(
+    // eslint-disable-next-line @angular-eslint/prefer-inject
     private route: ActivatedRoute,
+    // eslint-disable-next-line @angular-eslint/prefer-inject
     private bookService: BookService,
   ) {
     this.route.queryParamMap.subscribe((params) => {
