@@ -1,10 +1,9 @@
-.white-button {
-  background-color: white !important;
-  color: black !important;
-  border: 1px solid #ccc !important;
-}
 
-.white-button:hover {
-  background-color: #f0f0f0 !important;
-  border-color: #999 !important;
+:host ::ng-deep {
+  .p-button-outlined.p-button-secondary {
+    min-width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }

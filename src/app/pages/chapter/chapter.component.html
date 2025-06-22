@@ -1,3 +1,12 @@
-<div class="surface-card p-5 border-round shadow-2 text-center mb-4">
-  <h2 class="text-3xl font-bold">{{ bookName }}</h2>
+<div class="surface-card p-5 border-round shadow-2 mb-4 flex flex-column align-items-center">
+  <h2 class="text-3xl font-bold mb-4">{{ bookName }}</h2>
+  <div class="flex flex-wrap gap-3 justify-content-center">
+    <button 
+      *ngFor="let chapter of chapters" 
+      pButton 
+      type="button" 
+      label="{{ chapter }}" 
+      class="p-button-outlined p-button-secondary p-button-lg">
+    </button>
+  </div>
 </div>

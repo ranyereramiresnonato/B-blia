@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import {velhoTestamento, novoTestamento} from '../../consts/books'
 import { ActivatedRoute } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-chapter',
   standalone: true,
-  imports: [ButtonModule],
+  imports: [ButtonModule, CommonModule],
   templateUrl: './chapter.component.html',
   styleUrl: './chapter.component.scss'
 })
